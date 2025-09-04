@@ -6,13 +6,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-async def main():
-    server = MCPServer(host="localhost", port=8080)
+async def main(host="localhost", port=8080):
+    server = MCPServer(host=host, port=port)
     await server.start_server()
 
 
 if __name__ == "__main__":
+    host = "localhost"
+    port = 8080
+
     try:
-        asyncio.run(main())
+        asyncio.run(main(host, port))
     except KeyboardInterrupt:
         logger.info("MCP Server stopped manually")
