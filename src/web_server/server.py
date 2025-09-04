@@ -1,14 +1,13 @@
 from flask import Flask
 import logging
-import asyncio
 
-from src.mcp_server.tests.client import MCPClient
+from src.mcp_server.client import MCPClient
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class CPTServer:
+class WEBServer:
     def __init__(self, mcp_path = "ws://localhost:8080"):
         self.app = Flask(__name__)
         self.mcp_client = MCPClient(mcp_path)
@@ -29,6 +28,4 @@ class CPTServer:
                 await self.mcp_client.close()
             return response
 
-server = CPTServer()
-app = server.app
 

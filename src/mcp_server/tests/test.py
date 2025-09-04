@@ -1,7 +1,7 @@
 import asyncio
 import logging
 
-from src.mcp_server.tests.client import MCPClient
+from src.mcp_server.client import MCPClient
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
