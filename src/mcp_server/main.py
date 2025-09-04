@@ -1,5 +1,5 @@
 import asyncio
-from server import MCPServer  # assuming your server code is in server.py
+from src.mcp_server.server import MCPServer  # assuming your server code is in server.py
 import logging
 
 logging.basicConfig(level=logging.INFO)
