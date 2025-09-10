@@ -1,10 +1,12 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from flask import Flask
 import logging
 
-from src.mcp_server.client import MCPClient
+from clients.mcp_client import MCPClient
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class WEBServer:

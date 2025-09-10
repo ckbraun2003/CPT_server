@@ -1,4 +1,5 @@
 import json
+import sys
 import asyncio
 import websockets
 from typing import Dict, Any, Optional
@@ -6,7 +7,6 @@ import logging
 from datetime import datetime
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
